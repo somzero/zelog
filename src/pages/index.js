@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../component/layout"
-// import BlogTitle from "../components/blogTitle"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
@@ -41,7 +40,6 @@ const PostImage = styled(Img)`
 export default ({ data }) => {
   return (
     <Layout>
-      {/* <BlogTitle /> */}
       <Posts>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <PostBox key={node.id} to={node.fields.slug}>
