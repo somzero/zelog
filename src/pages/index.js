@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../component/layout"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import Blogtitle from "../component/blogTitle"
 
 const Posts = styled.div`
   padding: 0 14vw;
@@ -40,6 +41,7 @@ const PostImage = styled(Img)`
 export default ({ data }) => {
   return (
     <Layout>
+      <Blogtitle />
       <Posts>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <PostBox key={node.id} to={node.fields.slug}>

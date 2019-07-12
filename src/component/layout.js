@@ -5,7 +5,6 @@ import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 import { GlobalStyle } from "../theme/globalStyle"
 import Header from "./header"
-import BlogTitle from "./blogTitle"
 
 const ContentWrapper = styled.div`
   margin: 0 auto;
@@ -37,7 +36,6 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header />
-        <BlogTitle />
         <ContentWrapper>{children}</ContentWrapper>
       </>
     )}
