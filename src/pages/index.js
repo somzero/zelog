@@ -23,7 +23,7 @@ const PostTitle = styled.div`
 
 const PostBoxDescription = styled.div`
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 14 px;
 `
 
 const PostImageBox = styled.div`

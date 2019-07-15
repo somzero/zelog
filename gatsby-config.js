@@ -9,6 +9,7 @@ module.exports = {
   siteMetadata: {
     title: `Zelog blog`,
   },
+
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

@@ -5,17 +5,19 @@ import styled from "styled-components"
 
 const Wrapper = styled.div`
   padding-left: 14vw;
+  margin-top: 3vw;
 `
 
 const Title = styled.div`
   color: #b9b9b9;
-  font-size: 48px;
+  font-size: 40px;
   margin-bottom: 56px;
 `
 
 const Contents = styled.div`
   color: #b9b9b9;
-  font-size: 24px;
+  font-size: 16px;
+  line-height: 1.5;
 `
 
 export default ({ data }) => {
