@@ -1,66 +1,41 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../component/layout"
+import BlogTitle from "../component/blogTitle/blogTitle"
+import Layout from "../component/layout/layout"
 import Img from "gatsby-image"
-import styled from "styled-components"
-import Blogtitle from "../component/blogTitle"
-
-const Posts = styled.div`
-  padding: 0 14vw;
-  color: #b9b9b9;
-`
-
-const PostBox = styled(Link)`
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: inherit;
-`
-
-const PostTitle = styled.div`
-  font-size: 18px;
-`
-
-const PostBoxDescription = styled.div`
-  margin-top: 8px;
-  font-size: 14 px;
-`
-
-const PostImageBox = styled.div`
-  margin-top: 32px;
-  height: 190px;
-`
-
-const PostImage = styled(Img)`
-  max-width: 100%;
-  max-height: 100%;
-  margin: auto;
-  display: block;
-`
+import "../assets/css/reset.css"
+import "../assets/css/pageIndex.css"
 
 export default ({ data }) => {
   return (
     <Layout>
-      <Blogtitle />
-      <Posts>
+      <BlogTitle />
+      <div>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <PostBox key={node.id} to={node.fields.slug}>
-            <PostTitle>{node.frontmatter.title}</PostTitle>
-            <PostBoxDescription>
-              {node.frontmatter.description}
-            </PostBoxDescription>
-            <PostImageBox
-              style={{
-                width: `190px`,
-              }}
-            >
-              <PostImage
+          <Link className="post__box" key={node.id} to={node.fields.slug}>
+            <div className="post__text__box">
+              <div className="post__title">{node.frontmatter.title}</div>
+              {/* <div className="post__box__description">
+                {node.frontmatter.description}
+              </div> */}
+            </div>
+
+            <div className="post__image__box">
+              <Img
+                className="post__image"
                 fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+                style={{
+                  width: `${190 *
+                    (node.frontmatter.featuredImage.childImageSharp.fluid
+                      .presentationWidth /
+                      node.frontmatter.featuredImage.childImageSharp.fluid
+                        .presentationHeight)}px`,
+                }}
               />
-            </PostImageBox>
-          </PostBox>
+            </div>
+          </Link>
         ))}
-      </Posts>
+      </div>
     </Layout>
   )
 }
@@ -76,11 +51,12 @@ export const query = graphql`
           id
           frontmatter {
             title
-            description
             featuredImage {
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid
+                  presentationWidth
+                  presentationHeight
                 }
               }
             }

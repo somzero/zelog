@@ -1,33 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../component/layout"
-import styled from "styled-components"
-
-const Wrapper = styled.div`
-  padding-left: 14vw;
-  margin-top: 3vw;
-`
-
-const Title = styled.div`
-  color: #b9b9b9;
-  font-size: 40px;
-  margin-bottom: 56px;
-`
-
-const Contents = styled.div`
-  color: #b9b9b9;
-  font-size: 16px;
-  line-height: 1.5;
-`
+import Layout from "../component/layout/layout"
+import "../assets/css/reset.css"
+import "../assets/css/post.css"
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <Wrapper>
-        <Title>{post.frontmatter.title}</Title>
-        <Contents dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Wrapper>
+      <div class="post__template">
+        <div class="post__template__title">{post.frontmatter.title}</div>
+        <div
+          class="post__template__contents"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </div>
     </Layout>
   )
 }

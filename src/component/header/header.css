@@ -1,0 +1,28 @@
+.header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background: #101722;
+  z-index: 1;
+}
+
+.header__item {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 74px;
+}
+
+@media (max-width: 400px) {
+  .header {
+    height: 64px;
+  }
+
+  .header__item {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 32px;
+  }
+}
