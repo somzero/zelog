@@ -5,6 +5,7 @@ import Layout from "../component/layout/layout"
 import Img from "gatsby-image"
 import "../assets/css/reset.css"
 import "../assets/css/pageIndex.css"
+import "../assets/css/mobile.css"
 
 export default ({ data }) => {
   return (
