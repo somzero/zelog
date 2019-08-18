@@ -5,13 +5,13 @@
 .post__template__title {
   font-size: 48px;
   margin-bottom: 32px;
-  color: #ffffff;
+  color: #333333;
 }
 
 .post__template__contents {
   font-size: 14px;
   line-height: 1.5;
-  color: #ffffff;
+  color: #333333;
 }
 
 blockquote {
