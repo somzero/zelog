@@ -1,6 +1,5 @@
 ---
-title: UI디자인 툴 사용기 XD vs Sketch
-# description: XD와 SKet
+title: 카달로그 타이틀 H1 카달로그 타이틀 H1 카달로그 타이틀 H1 카달...
 publishedAt: 2019-07-11
 featuredImage: ./test.jpg
 ---

@@ -3,13 +3,16 @@ import "./header.css"
 
 const Header = () => (
   <div className="header">
-    <div className="header__item" style={{ color: `#ffae00` }}>
-      Blog
+    <div className="header__item" style={{ color: `#333` }}>
+      Home
     </div>
-    <div className="header__item" style={{ color: `#b9b9b9` }}>
+    <div className="header__item" style={{ color: `#333` }}>
       Project
     </div>
-    <div className="header__item" style={{ color: `#b9b9b9` }}>
+    <div className="header__item" style={{ color: `#333` }}>
+      Blog
+    </div>
+    <div className="header__item" style={{ color: `#333` }}>
       About
     </div>
   </div>
