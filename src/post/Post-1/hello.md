@@ -2,6 +2,7 @@
 title: 카달로그 타이틀 H1 카달로그 타이틀 H1 카달로그 타이틀 H1 카달...
 publishedAt: 2019-07-11
 featuredImage: ./test.jpg
+catalougeType: Bunjang
 ---
 
 Sketch 툴을 사용하면서 adobe XD 툴을 부가적으로 사용해보게 되었다.

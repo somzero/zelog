@@ -26,9 +26,10 @@ export default ({ data }) => {
                 }}
               />
             </div>
-            <div className="post__sub__title">catalouge-type</div>
-
             <div className="post__text__box">
+              <div className="post__sub__title">
+                {node.frontmatter.catalougeType}
+              </div>
               <div className="post__title">{node.frontmatter.title}</div>
               <div className="post__box__description">{node.excerpt}</div>
             </div>
@@ -50,6 +51,7 @@ export const query = graphql`
           id
           frontmatter {
             title
+            catalougeType
             featuredImage {
               childImageSharp {
                 fluid {

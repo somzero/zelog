@@ -29,3 +29,15 @@ blockquote {
     font-weight: bold;
   }
 } */
+
+.post__template__title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0 24px 0;
+}
+
+.post__template__contents {
+  font-size: 18px;
+  color: #333;
+}

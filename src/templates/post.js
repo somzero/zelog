@@ -9,6 +9,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div class="post__template">
+        <div class="post__sub__title">{post.frontmatter.catalougeType}</div>
         <div class="post__template__title">{post.frontmatter.title}</div>
         <div
           class="post__template__contents"
@@ -25,6 +26,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        catalougeType
       }
     }
   }
